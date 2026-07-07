@@ -11,14 +11,14 @@ let feedbackSubmitted = false;
 
 const translations = {
   en: {
-    documentTitle: 'Gasi Khoshy - Restaurant & Cafe',
+    documentTitle: 'Gasi Khoshy - SHAWARMA & GRILL',
     brand: {
       logo: 'Gasi <span>Khoshy</span>',
       name: 'Gasi Khoshy',
     },
     hero: {
-      eyebrow: 'Restaurant & Cafe',
-      tagline: 'Quality food, crafted with care',
+      eyebrow: 'SHAWARMA & GRILL',
+      tagline: 'EST. 1980 - Taste and quality, made with love',
     },
     buttons: {
       language: '🌐 Language',
@@ -46,7 +46,7 @@ const translations = {
       thanks: '✅ Thank you for your feedback!',
     },
     footer: {
-      tagline: 'Restaurant & Cafe · Fine Food Daily',
+      tagline: 'SHAWARMA & GRILL · Taste and quality, made with love',
       copy: '© 2025 Gasi Khoshy Restaurant & Cafe · All rights reserved',
     },
     empty: {
@@ -54,14 +54,14 @@ const translations = {
     },
   },
   ar: {
-    documentTitle: 'گاسی خۆشی - مطعم وكافيه',
+    documentTitle: 'گەصی خۆشی - شاورما ومشويات',
     brand: {
-      logo: 'گاسی <span>خۆشی</span>',
-      name: 'گاسی خۆشی',
+      logo: 'گەصی <span>خۆشی</span>',
+      name: 'گەصی خۆشی',
     },
     hero: {
-      eyebrow: 'مطعم وكافيه',
-      tagline: 'طعام شهي محضر بعناية',
+      eyebrow: 'شاورما ومشويات',
+      tagline: 'مذاق وجودة، مصنوع بحب',
     },
     buttons: {
       language: '🌐 اللغة',
@@ -89,21 +89,21 @@ const translations = {
       thanks: '✅ شكراً لملاحظاتك!',
     },
     footer: {
-      tagline: 'مطعم وكافيه · طعام فاخر يومياً',
-      copy: '© 2025 مطعم وكافيه گاسی خۆشی · جميع الحقوق محفوظة',
+      tagline: 'شاورما ومشويات · مذاق وجودة، مصنوع بحب',
+      copy: '© 2025 شاورما ومشويات گەصی خۆشی · جميع الحقوق محفوظة',
     },
     empty: {
       menu: 'لا توجد أصناف متاحة حالياً.',
     },
   },
   ku: {
-    documentTitle: 'گاسی خۆشی - ڕێستورانت و کافێ',
+    documentTitle: 'گەصی خۆشی - شاورمە و برژاو',
     brand: {
-      logo: 'گاسی <span>خۆشی</span>',
-      name: 'گاسی خۆشی',
+      logo: 'گەصی <span>خۆشی</span>',
+      name: 'گەصی خۆشی',
     },
     hero: {
-      eyebrow: 'ڕێستورانت و کافێ',
+      eyebrow: 'شاورمە و برژاو',
       tagline: 'خواردنی کوالیتی بە گرنگییەوە ئامادەکراوە',
     },
     buttons: {
@@ -132,8 +132,8 @@ const translations = {
       thanks: '✅ سوپاس بۆ بۆچوونەکەت!',
     },
     footer: {
-      tagline: 'ڕێستورانت و کافێ · خواردنی باش بەڕۆژانە',
-      copy: '© 2025 ڕێستورانت و کافێی گاسی خۆشی · هەموو مافەکان پارێزراون',
+      tagline: 'شاورمە و برژاو · خواردنی باش بەڕۆژانە',
+      copy: '© 2025 شاورمە و برژاو گەصی خۆشی · هەموو مافەکان پارێزراون',
     },
     empty: {
       menu: 'هیچ خواردنێک لە ئێستادا بەردەست نییە.',
@@ -141,65 +141,84 @@ const translations = {
   },
 };
 
+// -----------------------------------------------------------------------
+// Menu data — corrected names in EN / AR / KU based on the physical menu
+// -----------------------------------------------------------------------
 const menuData = [
   {
     id: 'gasi-khoshy',
-    title: { en: 'Gasi', ar: 'گەص', ku: 'گەص' },
-    titleEm: { en: 'Khoshy', ar: '', ku: '' },
-    navTitle: { en: 'Gasi Khoshy', ar: 'گەص خۆشی', ku: 'گەص خۆشی' },
+    title: { en: 'Grill', ar: 'مشويات', ku: 'برژاو' },
+    titleEm: { en: '& Burgers', ar: 'وبرغر', ku: 'و بەرگەر' },
+    navTitle: { en: 'Grill & Burgers', ar: 'مشويات وبرغر', ku: 'برژاو و بەرگەر' },
     icon: '🥙',
     items: [
-      { name: { en: 'Gasi Gosht', ar: 'گەص گۆشت', ku: 'گەص گۆشت' }, price: '4.000' },
-      { name: { en: 'Gasi Marishk', ar: 'گەص مریشك', ku: 'گەص مریشك' }, price: '3.000' },
-      { name: { en: 'Hamburgi Gosht', ar: 'هەمبەرگری گۆشت', ku: 'هەمبەرگری گۆشت' }, price: '4.000' },
-      { name: { en: 'Hamburgi Marishk', ar: 'هەمبەرگری مریشك', ku: 'هەمبەرگری مریشك' }, price: '3.000' },
-      { name: { en: 'Chiz Bargir Gosht', ar: 'چیز بەرگەر گۆشت', ku: 'چیز بەرگەر گۆشت' }, price: '4.500' },
-      { name: { en: 'Chiz Bargir Marishk', ar: 'چیز بەرگەر مریشك', ku: 'چیز بەرگەر مریشك' }, price: '3.500' },
-      { name: { en: 'Saji Gosht', ar: 'ساجی گۆشت', ku: 'ساجی گۆشت' }, price: '6.000' },
-      { name: { en: 'Saji Marishk', ar: 'ساجی مریشك', ku: 'ساجی مریشك' }, price: '5.000' },
-      { name: { en: 'Kolira Be Qima', ar: 'کولێرە بە قیمە', ku: 'کولێرە بە قیمە' }, price: '4.000' },
-      { name: { en: 'Kolira Be Qima Pener', ar: 'کولێرە بە قیمەی پەنیر', ku: 'کولێرە بە قیمەی پەنیر' }, price: '5.000' },
+      { name: { en: 'Beef Shawarma Plate', ar: 'گص لحم', ku: 'گەص گۆشت' }, price: '4.000' },
+      { name: { en: 'Chicken Shawarma Plate', ar: 'گص دجاج', ku: 'گەص مریشك' }, price: '3.000' },
+      { name: { en: 'Beef Burger', ar: 'همبرگر لحم', ku: 'هەمبەرگری گۆشت' }, price: '4.000' },
+      { name: { en: 'Chicken Burger', ar: 'همبرگر دجاج', ku: 'هەمبەرگری مریشك' }, price: '3.000' },
+      { name: { en: 'Cheese Beef Burger', ar: 'جيز برگر لحم', ku: 'چیز بەرگەر گۆشت' }, price: '4.500' },
+      { name: { en: 'Cheese Chicken Burger', ar: 'جيز برگر دجاج', ku: 'چیز بەرگەر مریشك' }, price: '3.500' },
+      {
+        name: { en: 'Beef Saj', ar: 'صاج لحم', ku: 'ساجی گۆشت' },
+        note: {
+          en: 'Beef, fries, olives, salad',
+          ar: 'گص لحم، بطاطا، زيتون، سلطة',
+          ku: 'گەص گۆشت، فینگر، زەیتون، زەڵاتە',
+        },
+        price: '6.000',
+      },
+      {
+        name: { en: 'Chicken Saj', ar: 'صاج دجاج', ku: 'ساجی مریشك' },
+        note: {
+          en: 'Chicken, fries, olives, salad',
+          ar: 'گص دجاج، بطاطا، زيتون، سلطة',
+          ku: 'گەص مریشك، فینگر، زەیتون، زەڵاتە',
+        },
+        price: '5.000',
+      },
+      { name: { en: 'Meat Pastry (Lahm Bi Ajeen)', ar: 'لحم بالعجين', ku: 'لحم بالعجین' }, price: '4.000' },
+      { name: { en: 'Meat Pastry with Cheese', ar: 'لحم بالعجين مع الجبن', ku: 'لحم بالعجین لەگەڵ پەنیر' }, price: '5.000' },
     ],
   },
   {
     id: 'extras',
-    title: { en: 'Extras', ar: 'لوحدات', ku: 'زەروە' },
-    titleEm: { en: '', ar: '', ku: '' },
-    navTitle: { en: 'Extras', ar: 'لوحدات', ku: 'زەروە' },
-    icon: '🥟',
+    title: { en: 'Sides &', ar: 'المقبلات', ku: 'خۆراکی' },
+    titleEm: { en: 'Appetizers', ar: 'الجانبية', ku: 'لاوەکی' },
+    navTitle: { en: 'Sides & Appetizers', ar: 'المقبلات', ku: 'خۆراکی لاوەکی' },
+    icon: '🍟',
     items: [
-      { name: { en: 'Finger', ar: 'فینگەر', ku: 'فینگەر' }, price: '3.000' },
-      { name: { en: 'Nagit 6 Pieces', ar: 'ناگێت ٦ دانە', ku: 'ناگێت ٦ دانە' }, price: '4.000' },
-      { name: { en: 'Moqembelat Small', ar: 'موقەمبیلات بچووك', ku: 'موقەمبیلات بچووك' }, price: '3.000' },
-      { name: { en: 'Moqembelat Large', ar: 'موقەمبیلات گەورە', ku: 'موقەمبیلات گەورە' }, price: '5.000' },
+      { name: { en: 'Chicken Fingers', ar: 'فنگر', ku: 'فینگەر' }, price: '3.000' },
+      { name: { en: 'Nuggets (6 pcs)', ar: 'ناگيت (كنتاكي) 6 عدد', ku: 'ناگێت (کنتاکی) ٦ دانە' }, price: '4.000' },
+      { name: { en: 'Small Appetizer Platter', ar: 'مقبلات صغيرة', ku: 'موقەمبیلات بچووك' }, price: '3.000' },
+      { name: { en: 'Large Appetizer Platter', ar: 'مقبلات كبيرة', ku: 'موقەمبیلات گەورە' }, price: '5.000' },
     ],
   },
   {
     id: 'cold-drinks',
-    title: { en: 'Cold', ar: 'سارد', ku: 'سارد' },
-    titleEm: { en: 'Drinks', ar: 'مشروبات', ku: 'خواردنەوە' },
+    title: { en: 'Cold', ar: 'مشروبات', ku: 'خواردنەوەی' },
+    titleEm: { en: 'Drinks', ar: 'باردة', ku: 'سارد' },
     navTitle: { en: 'Cold Drinks', ar: 'مشروبات باردة', ku: 'خواردنەوەی سارد' },
     icon: '🥤',
     items: [
-      { name: { en: 'Sardi Freesh', ar: 'ساردی فرێش', ku: 'ساردی فرێش' }, price: '1.500' },
-      { name: { en: 'Sardi Quto', ar: 'ساردی قوتو', ku: 'ساردی قوتو' }, price: '1.000' },
-      { name: { en: 'Mastaw', ar: 'ماستاو', ku: 'ماستاو' }, price: '1.000' },
-      { name: { en: 'Coffee', ar: 'کۆفی', ku: 'کۆفی' }, price: '2.000' },
+      { name: { en: 'Fresh Pepsi', ar: 'بيبسي فريش', ku: 'بێبسی فرێش' }, price: '1.500' },
+      { name: { en: 'Canned Soft Drink', ar: 'بارد قواطي', ku: 'ساردی قوتی' }, price: '1.000' },
+      { name: { en: 'Ayran (Yogurt Drink)', ar: 'لبن شنينة', ku: 'ماستاو' }, price: '1.000' },
+      { name: { en: 'Coffee', ar: 'كوفي (قهوة)', ku: 'کۆفی (قاوە)' }, price: '2.000' },
     ],
   },
   {
     id: 'meat-portions',
-    title: { en: 'Meat', ar: 'گەص', ku: 'گەص' },
-    titleEm: { en: 'Portions', ar: 'أجزاء', ku: 'بەشەکان' },
+    title: { en: 'Meat', ar: 'أجزاء', ku: 'بەشەکانی' },
+    titleEm: { en: 'Portions', ar: 'اللحم', ku: 'گۆشت' },
     navTitle: { en: 'Meat Portions', ar: 'أجزاء اللحم', ku: 'بەشەکانی گۆشت' },
     icon: '🥩',
     items: [
-      { name: { en: 'Half Person Gasi Gosht', ar: 'نیو نەفەر گەص گۆشت', ku: 'نیو نەفەر گەص گۆشت' }, price: '8.000' },
-      { name: { en: 'One Person Gasi Gosht', ar: 'یەك نەفەر گەص گۆشت', ku: 'یەك نەفەر گەص گۆشت' }, price: '15.000' },
-      { name: { en: 'One Kilo Gasi Gosht', ar: 'یەك کیلۆ گەص گۆشت', ku: 'یەك کیلۆ گەص گۆشت' }, price: '45.000' },
-      { name: { en: 'Half Person Gasi Marishk', ar: 'نیو نەفەر گەص مریشك', ku: 'نیو نەفەر گەص مریشك' }, price: '7.000' },
-      { name: { en: 'One Person Gasi Marishk', ar: 'یەك نەفەر گەص مریشك', ku: 'یەك نەفەر گەص مریشك' }, price: '14.000' },
-      { name: { en: 'One Kilo Gasi Marishk', ar: 'یەك کیلۆ گەص مریشك', ku: 'یەك کیلۆ گەص مریشك' }, price: '30.000' },
+      { name: { en: 'Half Portion Beef Shawarma', ar: 'نص نفر گص لحم', ku: 'نیو نەفەر گەص گۆشت' }, price: '8.000' },
+      { name: { en: 'Full Portion Beef Shawarma', ar: 'نفر كامل گص لحم', ku: 'یەك نەفەر گەص گۆشت' }, price: '15.000' },
+      { name: { en: '1 Kilo Beef Shawarma', ar: 'واحد كيلو گص لحم', ku: 'یەك کیلۆ گەص گۆشت' }, price: '45.000' },
+      { name: { en: 'Half Portion Chicken Shawarma', ar: 'نص نفر گص دجاج', ku: 'نیو نەفەر گەص مریشك' }, price: '7.000' },
+      { name: { en: 'Full Portion Chicken Shawarma', ar: 'نفر كامل گص دجاج', ku: 'یەك نەفەر گەص مریشك' }, price: '14.000' },
+      { name: { en: '1 Kilo Chicken Shawarma', ar: 'واحد كيلو گص دجاج', ku: 'یەك کیلۆ گەص مریشك' }, price: '30.000' },
     ],
   },
   {
@@ -209,26 +228,26 @@ const menuData = [
     navTitle: { en: 'Pizza', ar: 'پیتزا', ku: 'پیتزا' },
     icon: '🍕',
     items: [
-      { name: { en: 'Pizza Moshekhal', ar: 'پیتزای موشەکەل', ku: 'پیتزای موشەکەل' }, price: '8.000' },
-      { name: { en: 'Pizza Gosht', ar: 'پیتزای گۆشت', ku: 'پیتزای گۆشت' }, price: '8.000' },
-      { name: { en: 'Pizza Marishk', ar: 'پیتزای مریشك', ku: 'پیتزای مریشك' }, price: '7.000' },
-      { name: { en: 'Pizza Piperoni', ar: 'پیتزای پیپەرۆنی', ku: 'پیتزای پیپەرۆنی' }, price: '7.000' },
-      { name: { en: 'Pizza Sezawat', ar: 'پیتزای سەوزەوات', ku: 'پیتزای سەوزەوات' }, price: '7.000' },
-      { name: { en: 'Pizza Masi', ar: 'پیتزای ماسی', ku: 'پیتزای ماسی' }, price: '7.000' },
-      { name: { en: 'Pizza Margerita', ar: 'پیتزای مارگەریتا', ku: 'پیتزای مارگەریتا' }, price: '6.000' },
-      { name: { en: 'Pizza Calzone', ar: 'پیتزای کالزۆنە', ku: 'پیتزای کالزۆنە' }, price: '8.000' },
+      { name: { en: 'Mixed Pizza', ar: 'بيتزا مشكل', ku: 'پیتزای موشەکەل' }, price: '8.000' },
+      { name: { en: 'Beef Pizza', ar: 'بيتزا لحم', ku: 'پیتزای گۆشت' }, price: '8.000' },
+      { name: { en: 'Chicken Pizza', ar: 'بيتزا دجاج', ku: 'پیتزای مریشك' }, price: '7.000' },
+      { name: { en: 'Pepperoni Pizza', ar: 'بيتزا بيبروني', ku: 'پیتزای پیپەرۆنی' }, price: '7.000' },
+      { name: { en: 'Vegetable Pizza', ar: 'بيتزا خضروات', ku: 'پیتزای سەوزەوات' }, price: '7.000' },
+      { name: { en: 'Tuna Pizza', ar: 'بيتزا سمك', ku: 'پیتزای ماسی' }, price: '7.000' },
+      { name: { en: 'Margherita Pizza', ar: 'بيتزا مارگريتا', ku: 'پیتزای مارگەریتا' }, price: '6.000' },
+      { name: { en: 'Calzone Pizza (Closed)', ar: 'بيتزا كالزوني (مغلق)', ku: 'پیتزای کالزۆنی (داخراو)' }, price: '8.000' },
     ],
   },
   {
     id: 'rice',
-    title: { en: 'Rice', ar: 'برنج', ku: 'برنج' },
-    titleEm: { en: 'Dishes', ar: 'أطباق', ku: 'خۆراک' },
-    navTitle: { en: 'Rice Dishes', ar: 'أطباق الأرز', ku: 'برنجەکان' },
+    title: { en: 'Rice', ar: 'أطباق', ku: 'برنج' },
+    titleEm: { en: 'Dishes', ar: 'الأرز', ku: 'و فاسۆلیا' },
+    navTitle: { en: 'Rice Dishes', ar: 'أطباق الأرز', ku: 'برنج و فاسۆلیا' },
     icon: '🍚',
     items: [
-      { name: { en: 'Brenji Kurdish and Fasolia', ar: 'برنجی کوردی و فاسۆلیا (سادە)', ku: 'برنجی کوردی و فاسۆلیا (سادە)' }, price: '4.000' },
-      { name: { en: 'Brenji Kurdish and Fasolia with Gasi Gosht', ar: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص گۆشت', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص گۆشت' }, price: '7.000' },
-      { name: { en: 'Brenji Kurdish and Fasolia with Gasi Marishk', ar: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص مریشك', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص مریشك' }, price: '6.000' },
+      { name: { en: 'Rice with Beans (Plain)', ar: 'تمن مع فاصوليا (ساده)', ku: 'برنجی کوردی و فاسۆلیا (سادە)' }, price: '4.000' },
+      { name: { en: 'Rice & Beans with Beef Shawarma', ar: 'تمن و فاصوليا مع گص لحم', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص گۆشت' }, price: '7.000' },
+      { name: { en: 'Rice & Beans with Chicken Shawarma', ar: 'تمن و فاصوليا مع گص دجاج', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص مریشك' }, price: '6.000' },
     ],
   },
   {
@@ -238,9 +257,9 @@ const menuData = [
     navTitle: { en: 'Pasta', ar: 'پاستا', ku: 'پاستا' },
     icon: '🍝',
     items: [
-      { name: { en: 'Pasta Gosht', ar: 'پاستای گۆشت', ku: 'پاستای گۆشت' }, price: '6.000' },
-      { name: { en: 'Pasta Marishk', ar: 'پاستای مریشك', ku: 'پاستای مریشك' }, price: '5.000' },
-      { name: { en: 'Kapsalon', ar: 'کاپسالۆن', ku: 'کاپسالۆن' }, price: '6.000' },
+      { name: { en: 'Beef Pasta', ar: 'باستا لحم', ku: 'پاستای گۆشت' }, price: '6.000' },
+      { name: { en: 'Chicken Pasta', ar: 'باستا دجاج', ku: 'پاستای مریشك' }, price: '5.000' },
+      { name: { en: 'Kapsalon', ar: 'كابسالون', ku: 'کاپسالۆن' }, price: '6.000' },
     ],
   },
 ];
@@ -271,7 +290,12 @@ function getItemImageKey(section, item) {
   const itemName = localize(item.name, DEFAULT_LANGUAGE).toLowerCase();
 
   if (section.id === 'gasi-khoshy') {
-    return 'beefShawarma';
+    if (itemName.includes('burger')) {
+      if (itemName.includes('chicken') && itemName.includes('cheese')) return 'chickenCheeseburger';
+      if (itemName.includes('chicken')) return 'chickenBurger';
+      return itemName.includes('cheese') ? 'beefCheeseburger' : 'beefBurger';
+    }
+    return itemName.includes('chicken') ? 'chickenShawarma' : 'beefShawarma';
   }
 
   if (section.id === 'extras') {
@@ -279,6 +303,8 @@ function getItemImageKey(section, item) {
   }
 
   if (section.id === 'cold-drinks') {
+    if (itemName.includes('yogurt') || itemName.includes('ayran')) return 'laban';
+    if (itemName.includes('coffee')) return 'tea';
     return 'cola';
   }
 
@@ -287,67 +313,15 @@ function getItemImageKey(section, item) {
   }
 
   if (section.id === 'rice') {
-    return 'pizza';
+    return 'meatPlate';
   }
 
   if (section.id === 'pasta') {
     return 'pizza';
   }
 
-  if (section.id === 'burgers') {
-    if (itemName.includes('chicken') && itemName.includes('cheese')) {
-      return 'chickenCheeseburger';
-    }
-
-    if (itemName.includes('chicken')) {
-      return 'chickenBurger';
-    }
-
-    return itemName.includes('cheese') ? 'beefCheeseburger' : 'beefBurger';
-  }
-
-  if (section.id === 'sandwiches') {
-    if (itemName.includes('zinger')) {
-      return 'zingerSandwich';
-    }
-
-    if (itemName.includes('crispy')) {
-      return 'crispySandwich';
-    }
-
-    return itemName.includes('chicken') ? 'chickenShawarma' : 'beefShawarma';
-  }
-
-  if (section.id === 'shawarma') {
-    return itemName.includes('chicken') ? 'chickenShawarma' : 'beefShawarma';
-  }
-
   if (section.id === 'pizza') {
     return itemName.includes('super') ? 'superPizza' : 'pizza';
-  }
-
-  if (section.id === 'drinks') {
-    if (itemName.includes('cola')) {
-      return 'cola';
-    }
-
-    if (itemName.includes('yogurt') || itemName.includes('laban')) {
-      return 'laban';
-    }
-
-    return itemName.includes('tea') ? 'tea' : 'water';
-  }
-
-  if (section.id === 'meat') {
-    return 'meatPlate';
-  }
-
-  if (section.id === 'shawarma-plates') {
-    return 'shawarmaPlate';
-  }
-
-  if (section.id === 'falafel') {
-    return itemName.includes('plate') ? 'falafelPlate' : 'falafel';
   }
 
   return section.id === 'fries' ? 'fries' : 'pizza';
@@ -465,55 +439,6 @@ function renderFeedbackForm() {
   submitButton.addEventListener('click', submitFeedback);
 
   form.append(textarea, submitButton);
-}
-
-const ingredientLabels = {
-  bun: { en: 'Bun', ar: 'خبز البرغر', ku: 'نانی بەرگەر' },
-  bread: { en: 'Bread', ar: 'خبز', ku: 'نان' },
-  tomatoes: { en: 'Tomatoes', ar: 'طماطم', ku: 'تەماتە' },
-  onions: { en: 'Onions', ar: 'بصل', ku: 'پیاز' },
-  lettuce: { en: 'Lettuce', ar: 'خس', ku: 'کاهوو' },
-  pickles: { en: 'Pickles', ar: 'مخلل', ku: 'ترشی' },
-  houseSauce: { en: 'House sauce', ar: 'صلصة خاصة', ku: 'سۆسی تایبەت' },
-  garlicSauce: { en: 'Garlic sauce', ar: 'صلصة الثوم', ku: 'سۆسی سیر' },
-  sauce: { en: 'Sauce', ar: 'صلصة', ku: 'سۆس' },
-  beefMeat: { en: 'Beef meat', ar: 'لحم بقري', ku: 'گۆشتی مانگا' },
-  chicken: { en: 'Chicken', ar: 'دجاج', ku: 'مریشک' },
-  cheese: { en: 'Cheese', ar: 'جبن', ku: 'پەنیر' },
-  zingerChicken: { en: 'Zinger chicken', ar: 'دجاج زنجر', ku: 'مریشکی زینگەر' },
-  crispyChicken: { en: 'Crispy chicken', ar: 'دجاج كرسبي', ku: 'مریشکی کریسپی' },
-  beefShawarma: { en: 'Beef shawarma', ar: 'شاورما لحم', ku: 'شاوەرمەی گۆشت' },
-  chickenShawarma: { en: 'Chicken shawarma', ar: 'شاورما دجاج', ku: 'شاوەرمەی مریشک' },
-  shawarmaMeat: { en: 'Shawarma meat', ar: 'لحم شاورما', ku: 'گۆشتی شاوەرمە' },
-  pizzaDough: { en: 'Pizza dough', ar: 'عجينة بيتزا', ku: 'هەویری پیتزا' },
-  tomatoSauce: { en: 'Tomato sauce', ar: 'صلصة طماطم', ku: 'سۆسی تەماتە' },
-  mozzarella: { en: 'Mozzarella cheese', ar: 'جبن موزاريلا', ku: 'پەنیری مۆزارێلا' },
-  vegetables: { en: 'Vegetables', ar: 'خضار', ku: 'سەوزە' },
-  meat: { en: 'Meat', ar: 'لحم', ku: 'گۆشت' },
-  potatoes: { en: 'Potatoes', ar: 'بطاطا', ku: 'پەتاتە' },
-  salt: { en: 'Salt', ar: 'ملح', ku: 'خوێ' },
-  houseSeasoning: { en: 'House seasoning', ar: 'بهارات خاصة', ku: 'بەهاراتی تایبەت' },
-  drinkServing: {
-    en: 'Served chilled or hot, depending on the drink',
-    ar: 'يقدم بارداً أو ساخناً حسب المشروب',
-    ku: 'بەپێی جۆری خواردنەوەکە سارد یان گەرم پێشکەش دەکرێت',
-  },
-  grilledMeat: { en: 'Grilled meat', ar: 'لحم مشوي', ku: 'گۆشتی برژاو' },
-  salad: { en: 'Salad', ar: 'سلطة', ku: 'زەڵاتە' },
-  fries: { en: 'Fries', ar: 'بطاطا مقلية', ku: 'پەتاتەی سوورکراوە' },
-  chickpeas: { en: 'Chickpeas', ar: 'حمص', ku: 'نۆک' },
-  parsley: { en: 'Parsley', ar: 'بقدونس', ku: 'مەعدەنۆس' },
-  garlic: { en: 'Garlic', ar: 'ثوم', ku: 'سیر' },
-  spices: { en: 'Spices', ar: 'بهارات', ku: 'بەهارات' },
-  askTeam: {
-    en: 'Ask our team for today\'s ingredients',
-    ar: 'اسأل فريقنا عن مكونات اليوم',
-    ku: 'لە تیمەکەمان پرسیار بکە دەربارەی پێکهاتەکانی ئەمڕۆ',
-  },
-};
-
-function localizeIngredientKeys(keys) {
-  return keys.map(key => localize(ingredientLabels[key]) || key);
 }
 
 function getItemDetails(section, item) {
