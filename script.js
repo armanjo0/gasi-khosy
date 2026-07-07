@@ -38,7 +38,6 @@ const translations = {
       languageDescription: 'Choose your preferred menu language.',
       feedbackTitle: 'Share Feedback',
       feedbackDescription: "How was your experience? We'd love to hear from you.",
-      itemDetailsContains: 'Contains',
     },
     feedback: {
       placeholder: 'Tell us about your visit...',
@@ -81,7 +80,6 @@ const translations = {
       languageDescription: 'اختر اللغة المفضلة لعرض القائمة.',
       feedbackTitle: 'شارك ملاحظاتك',
       feedbackDescription: 'كيف كانت تجربتك؟ يسعدنا سماع رأيك.',
-      itemDetailsContains: 'يحتوي على',
     },
     feedback: {
       placeholder: 'اكتب لنا عن زيارتك...',
@@ -124,7 +122,6 @@ const translations = {
       languageDescription: 'زمانی دڵخوازت بۆ لیستی خواردن هەڵبژێرە.',
       feedbackTitle: 'بۆچوونت بنێرە',
       feedbackDescription: 'ئەزموونت چۆن بوو؟ دڵخۆش دەبین بە بیستنی بۆچوونت.',
-      itemDetailsContains: 'پێکهاتووە لە',
     },
     feedback: {
       placeholder: 'دەربارەی سەردانەکەت بۆمان بنووسە...',
@@ -152,12 +149,12 @@ const menuData = [
     navTitle: { en: 'Grill & Burgers', ar: 'مشويات وبرغر', ku: 'برژاو و بەرگەر' },
     icon: '🥙',
     items: [
-      { name: { en: 'Beef Shawarma Plate', ar: 'گص لحم', ku: 'گەص گۆشت' }, price: '4.000' },
-      { name: { en: 'Chicken Shawarma Plate', ar: 'گص دجاج', ku: 'گەص مریشك' }, price: '3.000' },
-      { name: { en: 'Beef Burger', ar: 'همبرگر لحم', ku: 'هەمبەرگری گۆشت' }, price: '4.000' },
-      { name: { en: 'Chicken Burger', ar: 'همبرگر دجاج', ku: 'هەمبەرگری مریشك' }, price: '3.000' },
-      { name: { en: 'Cheese Beef Burger', ar: 'جيز برگر لحم', ku: 'چیز بەرگەر گۆشت' }, price: '4.500' },
-      { name: { en: 'Cheese Chicken Burger', ar: 'جيز برگر دجاج', ku: 'چیز بەرگەر مریشك' }, price: '3.500' },
+      { name: { en: 'Beef Shawarma Plate', ar: 'گص لحم', ku: 'گەص گۆشت' }, price: '4.000', image: 'assets/images/beef-shawarma-plate.jpg' },
+      { name: { en: 'Chicken Shawarma Plate', ar: 'گص دجاج', ku: 'گەص مریشك' }, price: '3.000', image: 'assets/images/chicken-shawarma-plate.jpg' },
+      { name: { en: 'Beef Burger', ar: 'همبرگر لحم', ku: 'هەمبەرگری گۆشت' }, price: '4.000', image: 'assets/images/beef-burger.jpg' },
+      { name: { en: 'Chicken Burger', ar: 'همبرگر دجاج', ku: 'هەمبەرگری مریشك' }, price: '3.000', image: 'assets/images/chicken-burger.jpg' },
+      { name: { en: 'Cheese Beef Burger', ar: 'جيز برگر لحم', ku: 'چیز بەرگەر گۆشت' }, price: '4.500', image: 'assets/images/cheese-beef-burger.jpg' },
+      { name: { en: 'Cheese Chicken Burger', ar: 'جيز برگر دجاج', ku: 'چیز بەرگەر مریشك' }, price: '3.500', image: 'assets/images/cheese-chicken-burger.jpg' },
       {
         name: { en: 'Beef Saj', ar: 'صاج لحم', ku: 'ساجی گۆشت' },
         note: {
@@ -166,6 +163,7 @@ const menuData = [
           ku: 'گەص گۆشت، فینگر، زەیتون، زەڵاتە',
         },
         price: '6.000',
+        image: 'assets/images/beef-saj.jpg',
       },
       {
         name: { en: 'Chicken Saj', ar: 'صاج دجاج', ku: 'ساجی مریشك' },
@@ -175,9 +173,10 @@ const menuData = [
           ku: 'گەص مریشك، فینگر، زەیتون، زەڵاتە',
         },
         price: '5.000',
+        image: 'assets/images/chicken-saj.jpg',
       },
-      { name: { en: 'Meat Pastry (Lahm Bi Ajeen)', ar: 'لحم بالعجين', ku: 'لحم بالعجین' }, price: '4.000' },
-      { name: { en: 'Meat Pastry with Cheese', ar: 'لحم بالعجين مع الجبن', ku: 'لحم بالعجین لەگەڵ پەنیر' }, price: '5.000' },
+      { name: { en: 'Meat Pastry (Lahm Bi Ajeen)', ar: 'لحم بالعجين', ku: 'لحم بالعجین' }, price: '4.000', image: 'assets/images/meat-pastry.jpg' },
+      { name: { en: 'Meat Pastry with Cheese', ar: 'لحم بالعجين مع الجبن', ku: 'لحم بالعجین لەگەڵ پەنیر' }, price: '5.000', image: 'assets/images/meat-pastry-cheese.jpg' },
     ],
   },
   {
@@ -187,10 +186,10 @@ const menuData = [
     navTitle: { en: 'Sides & Appetizers', ar: 'المقبلات', ku: 'خۆراکی لاوەکی' },
     icon: '🍟',
     items: [
-      { name: { en: 'Chicken Fingers', ar: 'فنگر', ku: 'فینگەر' }, price: '3.000' },
-      { name: { en: 'Nuggets (6 pcs)', ar: 'ناگيت (كنتاكي) 6 عدد', ku: 'ناگێت (کنتاکی) ٦ دانە' }, price: '4.000' },
-      { name: { en: 'Small Appetizer Platter', ar: 'مقبلات صغيرة', ku: 'موقەمبیلات بچووك' }, price: '3.000' },
-      { name: { en: 'Large Appetizer Platter', ar: 'مقبلات كبيرة', ku: 'موقەمبیلات گەورە' }, price: '5.000' },
+      { name: { en: 'Chicken Fingers', ar: 'فنگر', ku: 'فینگەر' }, price: '3.000', image: 'assets/images/chicken-fingers.jpg' },
+      { name: { en: 'Nuggets (6 pcs)', ar: 'ناگيت (كنتاكي) 6 عدد', ku: 'ناگێت (کنتاکی) ٦ دانە' }, price: '4.000', image: 'assets/images/nuggets.jpg' },
+      { name: { en: 'Small Appetizer Platter', ar: 'مقبلات صغيرة', ku: 'موقەمبیلات بچووك' }, price: '3.000', image: 'assets/images/appetizer-platter-small.jpg' },
+      { name: { en: 'Large Appetizer Platter', ar: 'مقبلات كبيرة', ku: 'موقەمبیلات گەورە' }, price: '5.000', image: 'assets/images/appetizer-platter-large.jpg' },
     ],
   },
   {
@@ -200,10 +199,10 @@ const menuData = [
     navTitle: { en: 'Cold Drinks', ar: 'مشروبات باردة', ku: 'خواردنەوەی سارد' },
     icon: '🥤',
     items: [
-      { name: { en: 'Fresh Pepsi', ar: 'بيبسي فريش', ku: 'بێبسی فرێش' }, price: '1.500' },
-      { name: { en: 'Canned Soft Drink', ar: 'بارد قواطي', ku: 'ساردی قوتی' }, price: '1.000' },
-      { name: { en: 'Ayran (Yogurt Drink)', ar: 'لبن شنينة', ku: 'ماستاو' }, price: '1.000' },
-      { name: { en: 'Coffee', ar: 'كوفي (قهوة)', ku: 'کۆفی (قاوە)' }, price: '2.000' },
+      { name: { en: 'Fresh Pepsi', ar: 'بيبسي فريش', ku: 'بێبسی فرێش' }, price: '1.500', image: 'assets/images/fresh-pepsi.jpg' },
+      { name: { en: 'Canned Soft Drink', ar: 'بارد قواطي', ku: 'ساردی قوتی' }, price: '1.000', image: 'assets/images/canned-soft-drink.jpg' },
+      { name: { en: 'Ayran (Yogurt Drink)', ar: 'لبن شنينة', ku: 'ماستاو' }, price: '1.000', image: 'assets/images/ayran.jpg' },
+      { name: { en: 'Coffee', ar: 'كوفي (قهوة)', ku: 'کۆفی (قاوە)' }, price: '2.000', image: 'assets/images/coffee.jpg' },
     ],
   },
   {
@@ -213,12 +212,12 @@ const menuData = [
     navTitle: { en: 'Meat Portions', ar: 'أجزاء اللحم', ku: 'بەشەکانی گۆشت' },
     icon: '🥩',
     items: [
-      { name: { en: 'Half Portion Beef Shawarma', ar: 'نص نفر گص لحم', ku: 'نیو نەفەر گەص گۆشت' }, price: '8.000' },
-      { name: { en: 'Full Portion Beef Shawarma', ar: 'نفر كامل گص لحم', ku: 'یەك نەفەر گەص گۆشت' }, price: '15.000' },
-      { name: { en: '1 Kilo Beef Shawarma', ar: 'واحد كيلو گص لحم', ku: 'یەك کیلۆ گەص گۆشت' }, price: '45.000' },
-      { name: { en: 'Half Portion Chicken Shawarma', ar: 'نص نفر گص دجاج', ku: 'نیو نەفەر گەص مریشك' }, price: '7.000' },
-      { name: { en: 'Full Portion Chicken Shawarma', ar: 'نفر كامل گص دجاج', ku: 'یەك نەفەر گەص مریشك' }, price: '14.000' },
-      { name: { en: '1 Kilo Chicken Shawarma', ar: 'واحد كيلو گص دجاج', ku: 'یەك کیلۆ گەص مریشك' }, price: '30.000' },
+      { name: { en: 'Half Portion Beef Shawarma', ar: 'نص نفر گص لحم', ku: 'نیو نەفەر گەص گۆشت' }, price: '8.000', image: 'assets/images/beef-shawarma-half.jpg' },
+      { name: { en: 'Full Portion Beef Shawarma', ar: 'نفر كامل گص لحم', ku: 'یەك نەفەر گەص گۆشت' }, price: '15.000', image: 'assets/images/beef-shawarma-full.jpg' },
+      { name: { en: '1 Kilo Beef Shawarma', ar: 'واحد كيلو گص لحم', ku: 'یەك کیلۆ گەص گۆشت' }, price: '45.000', image: 'assets/images/beef-shawarma-kilo.jpg' },
+      { name: { en: 'Half Portion Chicken Shawarma', ar: 'نص نفر گص دجاج', ku: 'نیو نەفەر گەص مریشك' }, price: '7.000', image: 'assets/images/chicken-shawarma-half.jpg' },
+      { name: { en: 'Full Portion Chicken Shawarma', ar: 'نفر كامل گص دجاج', ku: 'یەك نەفەر گەص مریشك' }, price: '14.000', image: 'assets/images/chicken-shawarma-full.jpg' },
+      { name: { en: '1 Kilo Chicken Shawarma', ar: 'واحد كيلو گص دجاج', ku: 'یەك کیلۆ گەص مریشك' }, price: '30.000', image: 'assets/images/chicken-shawarma-kilo.jpg' },
     ],
   },
   {
@@ -228,14 +227,14 @@ const menuData = [
     navTitle: { en: 'Pizza', ar: 'پیتزا', ku: 'پیتزا' },
     icon: '🍕',
     items: [
-      { name: { en: 'Mixed Pizza', ar: 'بيتزا مشكل', ku: 'پیتزای موشەکەل' }, price: '8.000' },
-      { name: { en: 'Beef Pizza', ar: 'بيتزا لحم', ku: 'پیتزای گۆشت' }, price: '8.000' },
-      { name: { en: 'Chicken Pizza', ar: 'بيتزا دجاج', ku: 'پیتزای مریشك' }, price: '7.000' },
-      { name: { en: 'Pepperoni Pizza', ar: 'بيتزا بيبروني', ku: 'پیتزای پیپەرۆنی' }, price: '7.000' },
-      { name: { en: 'Vegetable Pizza', ar: 'بيتزا خضروات', ku: 'پیتزای سەوزەوات' }, price: '7.000' },
-      { name: { en: 'Tuna Pizza', ar: 'بيتزا سمك', ku: 'پیتزای ماسی' }, price: '7.000' },
-      { name: { en: 'Margherita Pizza', ar: 'بيتزا مارگريتا', ku: 'پیتزای مارگەریتا' }, price: '6.000' },
-      { name: { en: 'Calzone Pizza (Closed)', ar: 'بيتزا كالزوني (مغلق)', ku: 'پیتزای کالزۆنی (داخراو)' }, price: '8.000' },
+      { name: { en: 'Mixed Pizza', ar: 'بيتزا مشكل', ku: 'پیتزای موشەکەل' }, price: '8.000', image: 'assets/images/pizza-mixed.jpg' },
+      { name: { en: 'Beef Pizza', ar: 'بيتزا لحم', ku: 'پیتزای گۆشت' }, price: '8.000', image: 'assets/images/pizza-beef.jpg' },
+      { name: { en: 'Chicken Pizza', ar: 'بيتزا دجاج', ku: 'پیتزای مریشك' }, price: '7.000', image: 'assets/images/pizza-chicken.jpg' },
+      { name: { en: 'Pepperoni Pizza', ar: 'بيتزا بيبروني', ku: 'پیتزای پیپەرۆنی' }, price: '7.000', image: 'assets/images/pizza-pepperoni.jpg' },
+      { name: { en: 'Vegetable Pizza', ar: 'بيتزا خضروات', ku: 'پیتزای سەوزەوات' }, price: '7.000', image: 'assets/images/pizza-vegetable.jpg' },
+      { name: { en: 'Tuna Pizza', ar: 'بيتزا سمك', ku: 'پیتزای ماسی' }, price: '7.000', image: 'assets/images/pizza-tuna.jpg' },
+      { name: { en: 'Margherita Pizza', ar: 'بيتزا مارگريتا', ku: 'پیتزای مارگەریتا' }, price: '6.000', image: 'assets/images/pizza-margherita.jpg' },
+      { name: { en: 'Calzone Pizza (Closed)', ar: 'بيتزا كالزوني (مغلق)', ku: 'پیتزای کالزۆنی (داخراو)' }, price: '8.000', image: 'assets/images/pizza-calzone.jpg' },
     ],
   },
   {
@@ -245,9 +244,9 @@ const menuData = [
     navTitle: { en: 'Rice Dishes', ar: 'أطباق الأرز', ku: 'برنج و فاسۆلیا' },
     icon: '🍚',
     items: [
-      { name: { en: 'Rice with Beans (Plain)', ar: 'تمن مع فاصوليا (ساده)', ku: 'برنجی کوردی و فاسۆلیا (سادە)' }, price: '4.000' },
-      { name: { en: 'Rice & Beans with Beef Shawarma', ar: 'تمن و فاصوليا مع گص لحم', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص گۆشت' }, price: '7.000' },
-      { name: { en: 'Rice & Beans with Chicken Shawarma', ar: 'تمن و فاصوليا مع گص دجاج', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص مریشك' }, price: '6.000' },
+      { name: { en: 'Rice with Beans (Plain)', ar: 'تمن مع فاصوليا (ساده)', ku: 'برنجی کوردی و فاسۆلیا (سادە)' }, price: '4.000', image: 'assets/images/rice-beans.jpg' },
+      { name: { en: 'Rice & Beans with Beef Shawarma', ar: 'تمن و فاصوليا مع گص لحم', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص گۆشت' }, price: '7.000', image: 'assets/images/rice-beans-beef.jpg' },
+      { name: { en: 'Rice & Beans with Chicken Shawarma', ar: 'تمن و فاصوليا مع گص دجاج', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص مریشك' }, price: '6.000', image: 'assets/images/rice-beans-chicken.jpg' },
     ],
   },
   {
@@ -257,79 +256,12 @@ const menuData = [
     navTitle: { en: 'Pasta', ar: 'پاستا', ku: 'پاستا' },
     icon: '🍝',
     items: [
-      { name: { en: 'Beef Pasta', ar: 'باستا لحم', ku: 'پاستای گۆشت' }, price: '6.000' },
-      { name: { en: 'Chicken Pasta', ar: 'باستا دجاج', ku: 'پاستای مریشك' }, price: '5.000' },
-      { name: { en: 'Kapsalon', ar: 'كابسالون', ku: 'کاپسالۆن' }, price: '6.000' },
+      { name: { en: 'Beef Pasta', ar: 'باستا لحم', ku: 'پاستای گۆشت' }, price: '6.000', image: 'assets/images/pasta-beef.jpg' },
+      { name: { en: 'Chicken Pasta', ar: 'باستا دجاج', ku: 'پاستای مریشك' }, price: '5.000', image: 'assets/images/pasta-chicken.jpg' },
+      { name: { en: 'Kapsalon', ar: 'كابسالون', ku: 'کاپسالۆن' }, price: '6.000', image: 'assets/images/kapsalon.jpg' },
     ],
   },
 ];
-
-const itemImages = {
-  beefBurger: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=420&q=80',
-  chickenBurger: 'https://images.unsplash.com/photo-1615297928064-24977384d0da?auto=format&fit=crop&w=420&q=80',
-  beefCheeseburger: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=420&q=80',
-  chickenCheeseburger: 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=420&q=80',
-  zingerSandwich: 'https://images.unsplash.com/photo-1606755962773-d324e9a13086?auto=format&fit=crop&w=420&q=80',
-  crispySandwich: 'https://images.unsplash.com/photo-1606755962773-d324e9a13086?auto=format&fit=crop&w=420&q=80',
-  beefShawarma: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=420&q=80',
-  chickenShawarma: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=420&q=80',
-  pizza: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=420&q=80',
-  superPizza: 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=420&q=80',
-  fries: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=420&q=80',
-  cola: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=420&q=80',
-  laban: 'https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=420&q=80',
-  water: 'https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=420&q=80',
-  tea: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=420&q=80',
-  meatPlate: 'https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=420&q=80',
-  shawarmaPlate: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=420&q=80',
-  falafel: 'https://images.unsplash.com/photo-1593001874117-c99c800e3ebd?auto=format&fit=crop&w=420&q=80',
-  falafelPlate: 'https://images.unsplash.com/photo-1593001874117-c99c800e3ebd?auto=format&fit=crop&w=420&q=80',
-};
-
-function getItemImageKey(section, item) {
-  const itemName = localize(item.name, DEFAULT_LANGUAGE).toLowerCase();
-
-  if (section.id === 'gasi-khoshy') {
-    if (itemName.includes('burger')) {
-      if (itemName.includes('chicken') && itemName.includes('cheese')) return 'chickenCheeseburger';
-      if (itemName.includes('chicken')) return 'chickenBurger';
-      return itemName.includes('cheese') ? 'beefCheeseburger' : 'beefBurger';
-    }
-    return itemName.includes('chicken') ? 'chickenShawarma' : 'beefShawarma';
-  }
-
-  if (section.id === 'extras') {
-    return 'fries';
-  }
-
-  if (section.id === 'cold-drinks') {
-    if (itemName.includes('yogurt') || itemName.includes('ayran')) return 'laban';
-    if (itemName.includes('coffee')) return 'tea';
-    return 'cola';
-  }
-
-  if (section.id === 'meat-portions') {
-    return 'meatPlate';
-  }
-
-  if (section.id === 'rice') {
-    return 'meatPlate';
-  }
-
-  if (section.id === 'pasta') {
-    return 'pizza';
-  }
-
-  if (section.id === 'pizza') {
-    return itemName.includes('super') ? 'superPizza' : 'pizza';
-  }
-
-  return section.id === 'fries' ? 'fries' : 'pizza';
-}
-
-function getItemImage(section, item) {
-  return item.image ?? itemImages[getItemImageKey(section, item)];
-}
 
 function translate(path, lang = currentLanguage) {
   const value = path.split('.').reduce((node, key) => node?.[key], translations[lang]);
@@ -441,10 +373,6 @@ function renderFeedbackForm() {
   form.append(textarea, submitButton);
 }
 
-function getItemDetails(section, item) {
-  return [];
-}
-
 function openItemDetails(sectionIndex, itemIndex) {
   const section = menuData[sectionIndex];
   const item = section?.items[itemIndex];
@@ -461,7 +389,7 @@ function openItemDetails(sectionIndex, itemIndex) {
 
   title.textContent = localize(item.name);
   icon.innerHTML = '';
-  modalImage.src = getItemImage(section, item);
+  modalImage.src = item.image;
   modalImage.alt = localize(item.name);
   icon.appendChild(modalImage);
   price.textContent = `${item.price} ${translate('labels.currency')}`;
@@ -511,7 +439,7 @@ function createMenuSection(section, sectionIndex) {
   icon.className = 'section-icon';
 
   const sectionImage = document.createElement('img');
-  sectionImage.src = getItemImage(section, section.items[0]);
+  sectionImage.src = section.items[0].image;
   sectionImage.alt = localize(section.navTitle);
   icon.appendChild(sectionImage);
 
@@ -551,7 +479,7 @@ function createMenuSection(section, sectionIndex) {
 
     const itemPhoto = document.createElement('img');
     itemPhoto.className = 'item-photo';
-    itemPhoto.src = getItemImage(section, item);
+    itemPhoto.src = item.image;
     itemPhoto.alt = localize(item.name);
     itemPhoto.loading = 'lazy';
 
