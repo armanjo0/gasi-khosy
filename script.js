@@ -144,13 +144,13 @@ const translations = {
 const menuData = [
   {
     id: 'gasi-khoshy',
-    title: { en: 'Gasi', ar: 'گەصص', ku: 'گەصص' },
+    title: { en: 'Gasi', ar: 'گەص', ku: 'گەص' },
     titleEm: { en: 'Khoshy', ar: '', ku: '' },
-    navTitle: { en: 'Gasi Khoshy', ar: 'گەصص خۆشی', ku: 'گەصص خۆشی' },
+    navTitle: { en: 'Gasi Khoshy', ar: 'گەص خۆشی', ku: 'گەص خۆشی' },
     icon: '🥙',
     items: [
-      { name: { en: 'Gasi Gosht', ar: 'گەصص گۆشت', ku: 'گەصص گۆشت' }, price: '4.000' },
-      { name: { en: 'Gasi Marishk', ar: 'گەصص مریشك', ku: 'گەصص مریشك' }, price: '3.000' },
+      { name: { en: 'Gasi Gosht', ar: 'گەص گۆشت', ku: 'گەص گۆشت' }, price: '4.000' },
+      { name: { en: 'Gasi Marishk', ar: 'گەص مریشك', ku: 'گەص مریشك' }, price: '3.000' },
       { name: { en: 'Hamburgi Gosht', ar: 'هەمبەرگری گۆشت', ku: 'هەمبەرگری گۆشت' }, price: '4.000' },
       { name: { en: 'Hamburgi Marishk', ar: 'هەمبەرگری مریشك', ku: 'هەمبەرگری مریشك' }, price: '3.000' },
       { name: { en: 'Chiz Bargir Gosht', ar: 'چیز بەرگەر گۆشت', ku: 'چیز بەرگەر گۆشت' }, price: '4.500' },
@@ -189,17 +189,17 @@ const menuData = [
   },
   {
     id: 'meat-portions',
-    title: { en: 'Meat', ar: 'گەصص', ku: 'گەصص' },
+    title: { en: 'Meat', ar: 'گەص', ku: 'گەص' },
     titleEm: { en: 'Portions', ar: 'أجزاء', ku: 'بەشەکان' },
     navTitle: { en: 'Meat Portions', ar: 'أجزاء اللحم', ku: 'بەشەکانی گۆشت' },
     icon: '🥩',
     items: [
-      { name: { en: 'Half Person Gasi Gosht', ar: 'نیو نەفەر گەصص گۆشت', ku: 'نیو نەفەر گەصص گۆشت' }, price: '8.000' },
-      { name: { en: 'One Person Gasi Gosht', ar: 'یەك نەفەر گەصص گۆشت', ku: 'یەك نەفەر گەصص گۆشت' }, price: '15.000' },
-      { name: { en: 'One Kilo Gasi Gosht', ar: 'یەك کیلۆ گەصص گۆشت', ku: 'یەك کیلۆ گەصص گۆشت' }, price: '45.000' },
-      { name: { en: 'Half Person Gasi Marishk', ar: 'نیو نەفەر گەصص مریشك', ku: 'نیو نەفەر گەصص مریشك' }, price: '7.000' },
-      { name: { en: 'One Person Gasi Marishk', ar: 'یەك نەفەر گەصص مریشك', ku: 'یەك نەفەر گەصص مریشك' }, price: '14.000' },
-      { name: { en: 'One Kilo Gasi Marishk', ar: 'یەك کیلۆ گەصص مریشك', ku: 'یەك کیلۆ گەصص مریشك' }, price: '30.000' },
+      { name: { en: 'Half Person Gasi Gosht', ar: 'نیو نەفەر گەص گۆشت', ku: 'نیو نەفەر گەص گۆشت' }, price: '8.000' },
+      { name: { en: 'One Person Gasi Gosht', ar: 'یەك نەفەر گەص گۆشت', ku: 'یەك نەفەر گەص گۆشت' }, price: '15.000' },
+      { name: { en: 'One Kilo Gasi Gosht', ar: 'یەك کیلۆ گەص گۆشت', ku: 'یەك کیلۆ گەص گۆشت' }, price: '45.000' },
+      { name: { en: 'Half Person Gasi Marishk', ar: 'نیو نەفەر گەص مریشك', ku: 'نیو نەفەر گەص مریشك' }, price: '7.000' },
+      { name: { en: 'One Person Gasi Marishk', ar: 'یەك نەفەر گەص مریشك', ku: 'یەك نەفەر گەص مریشك' }, price: '14.000' },
+      { name: { en: 'One Kilo Gasi Marishk', ar: 'یەك کیلۆ گەص مریشك', ku: 'یەك کیلۆ گەص مریشك' }, price: '30.000' },
     ],
   },
   {
@@ -227,8 +227,8 @@ const menuData = [
     icon: '🍚',
     items: [
       { name: { en: 'Brenji Kurdish and Fasolia', ar: 'برنجی کوردی و فاسۆلیا (سادە)', ku: 'برنجی کوردی و فاسۆلیا (سادە)' }, price: '4.000' },
-      { name: { en: 'Brenji Kurdish and Fasolia with Gasi Gosht', ar: 'برنجی کوردی و فاسۆلیا لەگەڵ گەصص گۆشت', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەصص گۆشت' }, price: '7.000' },
-      { name: { en: 'Brenji Kurdish and Fasolia with Gasi Marishk', ar: 'برنجی کوردی و فاسۆلیا لەگەڵ گەصص مریشك', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەصص مریشك' }, price: '6.000' },
+      { name: { en: 'Brenji Kurdish and Fasolia with Gasi Gosht', ar: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص گۆشت', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص گۆشت' }, price: '7.000' },
+      { name: { en: 'Brenji Kurdish and Fasolia with Gasi Marishk', ar: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص مریشك', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص مریشك' }, price: '6.000' },
     ],
   },
   {
