@@ -51,6 +51,12 @@ const translations = {
     empty: {
       menu: 'No menu items available.',
     },
+    promo: {
+      offerBadge: 'Special Offer',
+      offerTitle: 'Combo Feast for three',
+      newBadge: 'New Dish',
+      newTitle: 'Kapsalon',
+    },
   },
   ar: {
     documentTitle: 'گەصی خۆشی - شاورما ومشويات',
@@ -92,6 +98,12 @@ const translations = {
     },
     empty: {
       menu: 'لا توجد أصناف متاحة حالياً.',
+    },
+    promo: {
+      offerBadge: 'عرض خاص',
+      offerTitle: 'وجبة العيلة لثلاثة',
+      newBadge: 'طبق جديد',
+      newTitle: 'كابسالون',
     },
   },
   ku: {
@@ -135,6 +147,12 @@ const translations = {
     empty: {
       menu: 'هیچ خواردنێک لە ئێستادا بەردەست نییە.',
     },
+    promo: {
+      offerBadge: 'ئۆفەری تایبەت',
+      offerTitle: 'خۆراکی هاوبەش بۆ دووکەس',
+      newBadge: 'خۆراکی نوێ',
+      newTitle: 'کاپسالۆن',
+    },
   },
 };
 
@@ -142,6 +160,55 @@ const translations = {
 // Menu data — corrected names in EN / AR / KU based on the physical menu
 // -----------------------------------------------------------------------
 const menuData = [
+  {
+    id: 'family-meals',
+    title: { en: 'Family', ar: 'وجبات', ku: 'ژەمی' },
+    titleEm: { en: 'Meals', ar: 'عائلية', ku: 'خێزانی' },
+    navTitle: { en: 'Family Meals', ar: 'وجبات عائلية', ku: 'ژەمی خێزانی' },
+    icon: '👨‍👩‍👧‍👦',
+    items: [
+      {
+        name: { en: 'Khoshy Meal 1', ar: 'وجبة خوشي ١', ku: 'ژەمی خۆشی ١' },
+        note: {
+          en: '1 Chicken Pizza, 1 Beef Pizza, Small Appetizers',
+          ar: 'بيتزا دجاج، بيتزا لحم، مقبلات صغيرة',
+          ku: 'یەک پیتزای مریشک، یەک پیتزای گۆشت، موقەمبیلاتی بچووک',
+        },
+        price: '15.000',
+        image: 'assets/images/family-meal-1.jpeg',
+      },
+      {
+        name: { en: 'Khoshy Meal 2', ar: 'وجبة خوشي ٢', ku: 'ژەمی خۆشی ٢' },
+        note: {
+          en: '1 Chicken Pizza, 1 Beef Shawarma, 1 Fresh Drink',
+          ar: 'بيتزا دجاج، گص لحم، بارد فريش',
+          ku: 'یەک پیتزای مریشک، یەک گەصی گۆشت، یەک ساردی فرێش',
+        },
+        price: '10.000',
+        image: 'assets/images/family-meal-2.jpeg',
+      },
+      {
+        name: { en: 'Khoshy Meal 3', ar: 'وجبة خوشي ٣', ku: 'ژەمی خۆشی ٣' },
+        note: {
+          en: '1 Beef Burger, 1 Chicken Shawarma, 1 Beef Shawarma, 1 Canned Pepsi',
+          ar: 'همبرگر لحم، گص دجاج، گص لحم، بيبسي قوطي',
+          ku: 'یەک هەمبەرگەری گۆشت، یەک گەصی مریشک، یەک گەصی گۆشت، یەک ببسی قوتو',
+        },
+        price: '10.000',
+        image: 'assets/images/family-meal-3.jpeg',
+      },
+      {
+        name: { en: 'Khoshy Meal 4', ar: 'وجبة خوشي ٤', ku: 'ژەمی خۆشی ٤' },
+        note: {
+          en: 'Plain Rice & Beans, 1 Beef Shawarma, 1 Chicken Shawarma, 1 Canned Pepsi, 1 Ayran',
+          ar: 'تمن وفاصوليا ساده، گص لحم، گص دجاج، بيبسي قوطي، لبن شنينة',
+          ku: 'برنج و فاسۆلیای سادە، یەک گەصی گۆشت، یەک گەصی مریشک، یەک ببسی قوتو، یەک ماستاو',
+        },
+        price: '11.000',
+        image: 'assets/images/family-meal-4.jpeg',
+      },
+    ],
+  },
   {
     id: 'gasi-khoshy',
     title: { en: 'Grill', ar: 'مشويات', ku: 'برژاو' },
@@ -182,7 +249,7 @@ const menuData = [
   {
     id: 'extras',
     title: { en: 'Sides &', ar: 'المقبلات', ku: 'خۆراکی' },
-    titleEm: { en: 'Appetizers', ar: 'الجانبية ', ku: 'لاوەکی ' },
+    titleEm: { en: 'Appetizers', ar: 'الجانبية', ku: 'لاوەکی' },
     navTitle: { en: 'Sides & Appetizers', ar: 'المقبلات', ku: 'خۆراکی لاوەکی' },
     icon: '🍟',
     items: [
@@ -636,6 +703,70 @@ function initScrollTop() {
   }, { passive: true });
 }
 
+let carouselIndex = 0;
+let carouselTimer = null;
+const CAROUSEL_INTERVAL = 5000;
+
+function carouselGoTo(index) {
+  const track = document.getElementById('carouselTrack');
+  const dots = document.querySelectorAll('.carousel-dot');
+
+  if (!track || !dots.length) {
+    return;
+  }
+
+  carouselIndex = (index + dots.length) % dots.length;
+  track.scrollTo({ left: carouselIndex * track.clientWidth, behavior: 'smooth' });
+
+  dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === carouselIndex));
+}
+
+function carouselMove(delta) {
+  carouselGoTo(carouselIndex + delta);
+  restartCarouselAutoplay();
+}
+
+function startCarouselAutoplay() {
+  clearInterval(carouselTimer);
+  carouselTimer = setInterval(() => carouselGoTo(carouselIndex + 1), CAROUSEL_INTERVAL);
+}
+
+function restartCarouselAutoplay() {
+  startCarouselAutoplay();
+}
+
+function initCarousel() {
+  const carousel = document.getElementById('promoCarousel');
+  const track = document.getElementById('carouselTrack');
+
+  if (!carousel || !track) {
+    return;
+  }
+
+  carouselGoTo(0);
+  startCarouselAutoplay();
+
+  carousel.addEventListener('mouseenter', () => clearInterval(carouselTimer));
+  carousel.addEventListener('mouseleave', startCarouselAutoplay);
+
+  let touchStartX = 0;
+
+  track.addEventListener('touchstart', event => {
+    touchStartX = event.touches[0].clientX;
+    clearInterval(carouselTimer);
+  }, { passive: true });
+
+  track.addEventListener('touchend', event => {
+    const deltaX = event.changedTouches[0].clientX - touchStartX;
+
+    if (Math.abs(deltaX) > 40) {
+      carouselGoTo(carouselIndex + (deltaX < 0 ? 1 : -1));
+    }
+
+    startCarouselAutoplay();
+  }, { passive: true });
+}
+
 function openLang() {
   updateLanguageOptions();
   document.getElementById('langOverlay').classList.add('open');
@@ -685,6 +816,7 @@ function init() {
   renderMenu();
   initScrollTop();
   initLangOptions();
+  initCarousel();
   updateLanguage();
 }
 
