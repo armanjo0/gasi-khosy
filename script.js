@@ -182,7 +182,7 @@ const menuData = [
   {
     id: 'extras',
     title: { en: 'Sides &', ar: 'المقبلات', ku: 'خۆراکی' },
-    titleEm: { en: 'Appetizers', ar: 'الجانبية', ku: 'لاوەکی' },
+    titleEm: { en: 'Appetizers', ar: 'الجانبية ', ku: 'لاوەکی ' },
     navTitle: { en: 'Sides & Appetizers', ar: 'المقبلات', ku: 'خۆراکی لاوەکی' },
     icon: '🍟',
     items: [
