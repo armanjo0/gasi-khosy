@@ -325,7 +325,7 @@ const menuData = [
     items: [
       { name: { en: 'Beef Pasta', ar: 'باستا لحم', ku: 'پاستای گۆشت' }, price: '6.000', image: 'assets/images/pasta-beef.jpg' },
       { name: { en: 'Chicken Pasta', ar: 'باستا دجاج', ku: 'پاستای مریشك' }, price: '5.000', image: 'assets/images/pasta-chicken.jpg' },
-      { name: { en: 'Kapsalon', ar: 'كابسالون', ku: 'کاپسالۆن' }, price: '6.000', image: 'assets/images/kapsalon.jpg' },
+      { name: { en: 'Kapsalon', ar: 'كابسالون', ku: 'کاپسالۆن' }, price: '6.000', image: 'assets/images/kapsalon.jpeg' },
     ],
   },
 ];
