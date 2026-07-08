@@ -149,12 +149,12 @@ const menuData = [
     navTitle: { en: 'Grill & Burgers', ar: 'مشويات وبرغر', ku: 'برژاو و بەرگەر' },
     icon: '🥙',
     items: [
-      { name: { en: 'Beef Shawarma Plate', ar: 'گص لحم', ku: 'گەص گۆشت' }, price: '4.000', image: 'assets/images/beef-shawarma-plate.jpg' },
-      { name: { en: 'Chicken Shawarma Plate', ar: 'گص دجاج', ku: 'گەص مریشك' }, price: '3.000', image: 'assets/images/chicken-shawarma-plate.jpg' },
+      { name: { en: 'Beef Shawarma', ar: 'گص لحم', ku: 'گەص گۆشت' }, price: '4.000', image: 'assets/images/beef-shawarma-samoon.jpeg' },
+      { name: { en: 'Chicken Shawarma', ar: 'گص دجاج', ku: 'گەص مریشك' }, price: '3.000', image: 'assets/images/chicken-shawarma-samoon.jpeg' },
       { name: { en: 'Beef Burger', ar: 'همبرگر لحم', ku: 'هەمبەرگری گۆشت' }, price: '4.000', image: 'assets/images/beef-burger.jpg' },
-      { name: { en: 'Chicken Burger', ar: 'همبرگر دجاج', ku: 'هەمبەرگری مریشك' }, price: '3.000', image: 'assets/images/chicken-burger.jpg' },
-      { name: { en: 'Cheese Beef Burger', ar: 'جيز برگر لحم', ku: 'چیز بەرگەر گۆشت' }, price: '4.500', image: 'assets/images/cheese-beef-burger.jpg' },
-      { name: { en: 'Cheese Chicken Burger', ar: 'جيز برگر دجاج', ku: 'چیز بەرگەر مریشك' }, price: '3.500', image: 'assets/images/cheese-chicken-burger.jpg' },
+      { name: { en: 'Chicken Burger', ar: 'همبرگر دجاج', ku: 'هەمبەرگری مریشك' }, price: '3.000', image: 'assets/images/chicken-burger.jpeg' },
+      { name: { en: 'Cheese Beef Burger', ar: 'جيز برگر لحم', ku: 'چیز بەرگەر گۆشت' }, price: '4.500', image: 'assets/images/beef-burger.jpg' },
+      { name: { en: 'Cheese Chicken Burger', ar: 'جيز برگر دجاج', ku: 'چیز بەرگەر مریشك' }, price: '3.500', image: 'assets/images/chicken-burger.jpeg' },
       {
         name: { en: 'Beef Saj', ar: 'صاج لحم', ku: 'ساجی گۆشت' },
         note: {
@@ -163,7 +163,7 @@ const menuData = [
           ku: 'گەص گۆشت، فینگر، زەیتون، زەڵاتە',
         },
         price: '6.000',
-        image: 'assets/images/beef-saj.jpg',
+        image: 'assets/images/beef-saj.jpeg',
       },
       {
         name: { en: 'Chicken Saj', ar: 'صاج دجاج', ku: 'ساجی مریشك' },
@@ -173,7 +173,7 @@ const menuData = [
           ku: 'گەص مریشك، فینگر، زەیتون، زەڵاتە',
         },
         price: '5.000',
-        image: 'assets/images/chicken-saj.jpg',
+        image: 'assets/images/chicken-saj.jpeg',
       },
       { name: { en: 'Meat Pastry (Lahm Bi Ajeen)', ar: 'لحم بالعجين', ku: 'لحم بالعجین' }, price: '4.000', image: 'assets/images/meat-pastry.jpg' },
       { name: { en: 'Meat Pastry with Cheese', ar: 'لحم بالعجين مع الجبن', ku: 'لحم بالعجین لەگەڵ پەنیر' }, price: '5.000', image: 'assets/images/meat-pastry-cheese.jpg' },
@@ -186,10 +186,10 @@ const menuData = [
     navTitle: { en: 'Sides & Appetizers', ar: 'المقبلات', ku: 'خۆراکی لاوەکی' },
     icon: '🍟',
     items: [
-      { name: { en: 'Chicken Fingers', ar: 'فنگر', ku: 'فینگەر' }, price: '3.000', image: 'assets/images/chicken-fingers.jpg' },
+      { name: { en: 'fries', ar: 'فنگر', ku: 'فینگەر' }, price: '3.000', image: 'assets/images/fries.jpg' },
       { name: { en: 'Nuggets (6 pcs)', ar: 'ناگيت (كنتاكي) 6 عدد', ku: 'ناگێت (کنتاکی) ٦ دانە' }, price: '4.000', image: 'assets/images/nuggets.jpg' },
-      { name: { en: 'Small Appetizer Platter', ar: 'مقبلات صغيرة', ku: 'موقەمبیلات بچووك' }, price: '3.000', image: 'assets/images/appetizer-platter-small.jpg' },
-      { name: { en: 'Large Appetizer Platter', ar: 'مقبلات كبيرة', ku: 'موقەمبیلات گەورە' }, price: '5.000', image: 'assets/images/appetizer-platter-large.jpg' },
+      { name: { en: 'Small Appetizer Platter', ar: 'مقبلات صغيرة', ku: 'موقەمبیلات بچووك' }, price: '3.000', image: 'assets/images/appetizer.jpg' },
+      { name: { en: 'Large Appetizer Platter', ar: 'مقبلات كبيرة', ku: 'موقەمبیلات گەورە' }, price: '5.000', image: 'assets/images/appetizer.jpg' },
     ],
   },
   {
@@ -213,11 +213,11 @@ const menuData = [
     icon: '🥩',
     items: [
       { name: { en: 'Half Portion Beef Shawarma', ar: 'نص نفر گص لحم', ku: 'نیو نەفەر گەص گۆشت' }, price: '8.000', image: 'assets/images/beef-shawarma-half.jpg' },
-      { name: { en: 'Full Portion Beef Shawarma', ar: 'نفر كامل گص لحم', ku: 'یەك نەفەر گەص گۆشت' }, price: '15.000', image: 'assets/images/beef-shawarma-full.jpg' },
-      { name: { en: '1 Kilo Beef Shawarma', ar: 'واحد كيلو گص لحم', ku: 'یەك کیلۆ گەص گۆشت' }, price: '45.000', image: 'assets/images/beef-shawarma-kilo.jpg' },
+      { name: { en: 'Full Portion Beef Shawarma', ar: 'نفر كامل گص لحم', ku: 'یەك نەفەر گەص گۆشت' }, price: '15.000', image: 'assets/images/beef-shawarma-full.jpeg' },
+      { name: { en: '1 Kilo Beef Shawarma', ar: 'واحد كيلو گص لحم', ku: 'یەك کیلۆ گەص گۆشت' }, price: '45.000', image: 'assets/images/beef-shawarma-kilo.jpeg' },
       { name: { en: 'Half Portion Chicken Shawarma', ar: 'نص نفر گص دجاج', ku: 'نیو نەفەر گەص مریشك' }, price: '7.000', image: 'assets/images/chicken-shawarma-half.jpg' },
-      { name: { en: 'Full Portion Chicken Shawarma', ar: 'نفر كامل گص دجاج', ku: 'یەك نەفەر گەص مریشك' }, price: '14.000', image: 'assets/images/chicken-shawarma-full.jpg' },
-      { name: { en: '1 Kilo Chicken Shawarma', ar: 'واحد كيلو گص دجاج', ku: 'یەك کیلۆ گەص مریشك' }, price: '30.000', image: 'assets/images/chicken-shawarma-kilo.jpg' },
+      { name: { en: 'Full Portion Chicken Shawarma', ar: 'نفر كامل گص دجاج', ku: 'یەك نەفەر گەص مریشك' }, price: '14.000', image: 'assets/images/chicken-shawarma-full.jpeg' },
+      { name: { en: '1 Kilo Chicken Shawarma', ar: 'واحد كيلو گص دجاج', ku: 'یەك کیلۆ گەص مریشك' }, price: '30.000', image: 'assets/images/chicken-shawarma-kilo.jpeg' },
     ],
   },
   {
@@ -228,7 +228,7 @@ const menuData = [
     icon: '🍕',
     items: [
       { name: { en: 'Mixed Pizza', ar: 'بيتزا مشكل', ku: 'پیتزای موشەکەل' }, price: '8.000', image: 'assets/images/pizza-mixed.jpg' },
-      { name: { en: 'Beef Pizza', ar: 'بيتزا لحم', ku: 'پیتزای گۆشت' }, price: '8.000', image: 'assets/images/pizza-beef.jpg' },
+      { name: { en: 'Beef Pizza', ar: 'بيتزا لحم', ku: 'پیتزای گۆشت' }, price: '8.000', image: 'assets/images/pizza-beaf.jpg' },
       { name: { en: 'Chicken Pizza', ar: 'بيتزا دجاج', ku: 'پیتزای مریشك' }, price: '7.000', image: 'assets/images/pizza-chicken.jpg' },
       { name: { en: 'Pepperoni Pizza', ar: 'بيتزا بيبروني', ku: 'پیتزای پیپەرۆنی' }, price: '7.000', image: 'assets/images/pizza-pepperoni.jpg' },
       { name: { en: 'Vegetable Pizza', ar: 'بيتزا خضروات', ku: 'پیتزای سەوزەوات' }, price: '7.000', image: 'assets/images/pizza-vegetable.jpg' },
@@ -244,9 +244,9 @@ const menuData = [
     navTitle: { en: 'Rice Dishes', ar: 'أطباق الأرز', ku: 'برنج و فاسۆلیا' },
     icon: '🍚',
     items: [
-      { name: { en: 'Rice with Beans (Plain)', ar: 'تمن مع فاصوليا (ساده)', ku: 'برنجی کوردی و فاسۆلیا (سادە)' }, price: '4.000', image: 'assets/images/rice-beans.jpg' },
-      { name: { en: 'Rice & Beans with Beef Shawarma', ar: 'تمن و فاصوليا مع گص لحم', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص گۆشت' }, price: '7.000', image: 'assets/images/rice-beans-beef.jpg' },
-      { name: { en: 'Rice & Beans with Chicken Shawarma', ar: 'تمن و فاصوليا مع گص دجاج', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص مریشك' }, price: '6.000', image: 'assets/images/rice-beans-chicken.jpg' },
+      { name: { en: 'Rice with Beans (Plain)', ar: 'تمن مع فاصوليا (ساده)', ku: 'برنجی کوردی و فاسۆلیا (سادە)' }, price: '4.000', image: 'assets/images/rice-beans.jpeg' },
+      { name: { en: 'Rice & Beans with Beef Shawarma', ar: 'تمن و فاصوليا مع گص لحم', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص گۆشت' }, price: '7.000', image: 'assets/images/rice-beans-beef.jpeg' },
+      { name: { en: 'Rice & Beans with Chicken Shawarma', ar: 'تمن و فاصوليا مع گص دجاج', ku: 'برنجی کوردی و فاسۆلیا لەگەڵ گەص مریشك' }, price: '6.000', image: 'assets/images/rice-beans-chicken.jpeg' },
     ],
   },
   {
