@@ -7,7 +7,6 @@ const DEFAULT_LANGUAGE = 'en';
 let currentLanguage = DEFAULT_LANGUAGE;
 let sectionObserver = null;
 let cardObserver = null;
-let feedbackSubmitted = false;
 
 const translations = {
   en: {
@@ -22,10 +21,8 @@ const translations = {
     },
     buttons: {
       language: '🌐 Language',
-      feedback: '✍️ Feedback',
       backToTop: 'Back to top',
-      close: 'Close',
-      sendFeedback: 'Send Feedback →',
+      close: 'Close', 
     },
     labels: {
       phone: 'Phone',
@@ -36,13 +33,6 @@ const translations = {
     modals: {
       languageTitle: 'Choose Language',
       languageDescription: 'Choose your preferred menu language.',
-      feedbackTitle: 'Share Feedback',
-      feedbackDescription: "How was your experience? We'd love to hear from you.",
-    },
-    feedback: {
-      placeholder: 'Tell us about your visit...',
-      empty: 'Please write something first.',
-      thanks: '✅ Thank you for your feedback!',
     },
     footer: {
       tagline: 'SHAWARMA & GRILL · Taste and quality, made with love',
@@ -70,10 +60,10 @@ const translations = {
     },
     buttons: {
       language: '🌐 اللغة',
-      feedback: '✍️ الملاحظات',
+   
       backToTop: 'العودة إلى الأعلى',
       close: 'إغلاق',
-      sendFeedback: 'إرسال الملاحظات ←',
+
     },
     labels: {
       phone: 'الهاتف',
@@ -84,14 +74,9 @@ const translations = {
     modals: {
       languageTitle: 'اختر اللغة',
       languageDescription: 'اختر اللغة المفضلة لعرض القائمة.',
-      feedbackTitle: 'شارك ملاحظاتك',
-      feedbackDescription: 'كيف كانت تجربتك؟ يسعدنا سماع رأيك.',
+
     },
-    feedback: {
-      placeholder: 'اكتب لنا عن زيارتك...',
-      empty: 'يرجى كتابة ملاحظة أولاً.',
-      thanks: '✅ شكراً لملاحظاتك!',
-    },
+
     footer: {
       tagline: 'شاورما ومشويات · مذاق وجودة، مصنوع بحب',
       copy: '© 2025 شاورما ومشويات گەصی خۆشی · جميع الحقوق محفوظة',
@@ -118,10 +103,10 @@ const translations = {
     },
     buttons: {
       language: '🌐 زمان',
-      feedback: '✍️ بۆچوون',
+
       backToTop: 'گەڕانەوە بۆ سەرەوە',
       close: 'داخستن',
-      sendFeedback: 'ناردنی بۆچوون ←',
+
     },
     labels: {
       phone: 'تەلەفۆن',
@@ -132,14 +117,9 @@ const translations = {
     modals: {
       languageTitle: 'زمان هەڵبژێرە',
       languageDescription: 'زمانی دڵخوازت بۆ لیستی خواردن هەڵبژێرە.',
-      feedbackTitle: 'بۆچوونت بنێرە',
-      feedbackDescription: 'ئەزموونت چۆن بوو؟ دڵخۆش دەبین بە بیستنی بۆچوونت.',
+
     },
-    feedback: {
-      placeholder: 'دەربارەی سەردانەکەت بۆمان بنووسە...',
-      empty: 'تکایە سەرەتا شتێک بنووسە.',
-      thanks: '✅ سوپاس بۆ بۆچوونەکەت!',
-    },
+
     footer: {
       tagline: 'شاورمە و برژاو · خواردنی باش بەڕۆژانە',
       copy: '© 2025 شاورمە و برژاو گەصی خۆشی · هەموو مافەکان پارێزراون',
@@ -404,42 +384,6 @@ function updateLanguageOptions() {
   });
 }
 
-function renderFeedbackForm() {
-  const form = document.getElementById('feedbackForm');
-
-  if (!form || (!feedbackSubmitted && form.querySelector('#feedbackText'))) {
-    const textarea = document.getElementById('feedbackText');
-    const button = form?.querySelector('.feedback-submit');
-
-    if (textarea) {
-      textarea.placeholder = translate('feedback.placeholder');
-      textarea.dir = isRtl() ? 'rtl' : 'ltr';
-    }
-
-    if (button) {
-      button.textContent = translate('buttons.sendFeedback');
-    }
-
-    return;
-  }
-
-  feedbackSubmitted = false;
-  form.innerHTML = '';
-
-  const textarea = document.createElement('textarea');
-  textarea.id = 'feedbackText';
-  textarea.placeholder = translate('feedback.placeholder');
-  textarea.dir = isRtl() ? 'rtl' : 'ltr';
-
-  const submitButton = document.createElement('button');
-  submitButton.className = 'feedback-submit';
-  submitButton.type = 'button';
-  submitButton.textContent = translate('buttons.sendFeedback');
-  submitButton.addEventListener('click', submitFeedback);
-
-  form.append(textarea, submitButton);
-}
-
 function openItemDetails(sectionIndex, itemIndex) {
   const section = menuData[sectionIndex];
   const item = section?.items[itemIndex];
@@ -635,7 +579,6 @@ function updateLanguage() {
   updateStaticTranslations();
   renderNavigation();
   renderMenu();
-  renderFeedbackForm();
   updateLanguageOptions();
 }
 
@@ -772,10 +715,6 @@ function openLang() {
   document.getElementById('langOverlay').classList.add('open');
 }
 
-function openFeedback() {
-  renderFeedbackForm();
-  document.getElementById('feedbackOverlay').classList.add('open');
-}
 
 function closeAll(event) {
   if (
@@ -785,23 +724,6 @@ function closeAll(event) {
   ) {
     document.querySelectorAll('.overlay').forEach(overlay => overlay.classList.remove('open'));
   }
-}
-
-function submitFeedback() {
-  const feedbackText = document.getElementById('feedbackText');
-  const value = feedbackText?.value.trim();
-
-  if (!value) {
-    alert(translate('feedback.empty'));
-    return;
-  }
-
-  feedbackSubmitted = true;
-  document.getElementById('feedbackForm').innerHTML = `
-    <p class="feedback-success">${translate('feedback.thanks')}</p>
-  `;
-
-  setTimeout(closeAll, 2000);
 }
 
 function initLangOptions() {
