@@ -681,7 +681,7 @@ button {
 /* Price badge */
 .item-price {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--orange);
   letter-spacing: .02em;
@@ -693,7 +693,7 @@ button {
 }
  
 .item-price .currency {
-  font-size: .72rem;
+  font-size: .9rem;
   font-weight: 500;
   color: var(--muted);
   display: inline;
