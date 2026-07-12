@@ -155,7 +155,7 @@ const menuData = [
           ku: 'یەک پیتزای مریشک، یەک پیتزای گۆشت، موقەمبیلاتی بچووک',
         },
         price: '15.000',
-        image: 'assets/images/low/family-meal-1.webp',
+        image: 'assets/images/family-meal-1.webp',
       },
       {
         name: { en: 'Khoshy Meal 2', ar: 'وجبة خوشي ٢', ku: 'ژەمی خۆشی ٢' },
@@ -165,7 +165,7 @@ const menuData = [
           ku: 'یەک پیتزای مریشک، یەک گەصی گۆشت، یەک ساردی فرێش',
         },
         price: '10.000',
-        image: 'assets/images/low/family-meal-2.webp',
+        image: 'assets/images/family-meal-2.webp',
       },
       {
         name: { en: 'Khoshy Meal 3', ar: 'وجبة خوشي ٣', ku: 'ژەمی خۆشی ٣' },
@@ -175,7 +175,7 @@ const menuData = [
           ku: 'یەک هەمبەرگەری گۆشت، یەک گەصی مریشک، یەک گەصی گۆشت، یەک ببسی قوتو',
         },
         price: '10.000',
-        image: 'assets/images/low/family-meal-3.webp',
+        image: 'assets/images/family-meal-3.webp',
       },
       {
         name: { en: 'Khoshy Meal 4', ar: 'وجبة خوشي ٤', ku: 'ژەمی خۆشی ٤' },
@@ -185,7 +185,7 @@ const menuData = [
           ku: 'برنج و فاسۆلیای سادە، یەک گەصی گۆشت، یەک گەصی مریشک، یەک ببسی قوتو، یەک ماستاو',
         },
         price: '11.000',
-        image: 'assets/images/low/family-meal-4.webp',
+        image: 'assets/images/family-meal-4.webp',
       },
     ],
   },
