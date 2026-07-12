@@ -236,7 +236,7 @@ button {
   inset: 0;
   background:
     linear-gradient(160deg, rgba(15, 38, 29, .94) 0%, rgba(201, 122, 20, .24) 60%, rgba(15, 38, 29, .96) 100%),
-    url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80') center / cover no-repeat;
+    url('assets/images/xoshi.jpeg') center / cover no-repeat;
   transform: scale(1.05);
   animation: heroZoom 12s ease-in-out infinite alternate;
 }
