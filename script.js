@@ -129,7 +129,7 @@ const translations = {
     },
     promo: {
       offerBadge: 'ئۆفەری تایبەت',
-      offerTitle: 'خۆراکی هاوبەش بۆ دووکەس',
+      offerTitle: 'ژەمی خێزانی',
       newBadge: 'خۆراکی نوێ',
       newTitle: 'کاپسالۆن',
     },
@@ -142,8 +142,8 @@ const translations = {
 const menuData = [
   {
     id: 'family-meals',
-    title: { en: 'Family', ar: 'وجبات', ku: 'ژەمی' },
-    titleEm: { en: 'Meals', ar: 'عائلية', ku: 'خێزانی' },
+    title: { en: 'Family', ar: ' وجبات', ku: 'ژەمی' },
+    titleEm: { en: 'Meals', ar: 'عائلية', ku: 'خێزانی ' },
     navTitle: { en: 'Family Meals', ar: 'وجبات عائلية', ku: 'ژەمی خێزانی' },
     icon: '👨‍👩‍👧‍👦',
     items: [
@@ -191,7 +191,7 @@ const menuData = [
   },
   {
     id: 'gasi-khoshy',
-    title: { en: 'Grill', ar: 'مشويات', ku: 'برژاو' },
+    title: { en: 'Grill', ar: ' مشويات', ku: ' برژاو' },
     titleEm: { en: '& Burgers', ar: 'وبرغر', ku: 'و بەرگەر' },
     navTitle: { en: 'Grill & Burgers', ar: 'مشويات وبرغر', ku: 'برژاو و بەرگەر' },
     icon: '🥙',
@@ -228,7 +228,7 @@ const menuData = [
   },
   {
     id: 'extras',
-    title: { en: 'Sides &', ar: 'المقبلات', ku: 'خۆراکی' },
+    title: { en: 'Sides &', ar: ' المقبلات', ku: ' خۆراکی' },
     titleEm: { en: 'Appetizers', ar: 'الجانبية', ku: 'لاوەکی' },
     navTitle: { en: 'Sides & Appetizers', ar: 'المقبلات', ku: 'خۆراکی لاوەکی' },
     icon: '🍟',
@@ -241,7 +241,7 @@ const menuData = [
   },
   {
     id: 'cold-drinks',
-    title: { en: 'Cold', ar: 'مشروبات', ku: 'خواردنەوەی' },
+    title: { en: 'Cold', ar: ' مشروبات', ku: ' خواردنەوەی' },
     titleEm: { en: 'Drinks', ar: 'باردة', ku: 'سارد' },
     navTitle: { en: 'Cold Drinks', ar: 'مشروبات باردة', ku: 'خواردنەوەی سارد' },
     icon: '🥤',
@@ -254,7 +254,7 @@ const menuData = [
   },
   {
     id: 'meat-portions',
-    title: { en: 'Meat', ar: 'أجزاء', ku: 'بەشەکانی' },
+    title: { en: 'Meat', ar: ' أجزاء', ku: ' بەشەکانی' },
     titleEm: { en: 'Portions', ar: 'اللحم', ku: 'گۆشت' },
     navTitle: { en: 'Meat Portions', ar: 'أجزاء اللحم', ku: 'بەشەکانی گۆشت' },
     icon: '🥩',
@@ -286,7 +286,7 @@ const menuData = [
   },
   {
     id: 'rice',
-    title: { en: 'Rice', ar: 'أطباق', ku: 'برنج' },
+    title: { en: 'Rice', ar: ' أطباق', ku: ' برنج' },
     titleEm: { en: 'Dishes', ar: 'الأرز', ku: 'و فاسۆلیا' },
     navTitle: { en: 'Rice Dishes', ar: 'أطباق الأرز', ku: 'برنج و فاسۆلیا' },
     icon: '🍚',
