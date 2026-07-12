@@ -87,8 +87,8 @@ button {
 .landing-video {
   object-fit: cover;
   background:
-    linear-gradient(155deg, rgba(26, 16, 11, .98), rgba(61, 35, 23, .72)),
-    url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80') center / cover no-repeat;
+   /* linear-gradient(155deg, rgba(26, 16, 11, .98), rgba(61, 35, 23, .72)),*/
+    url('assets/images/xoshi.jpeg') center / cover no-repeat;
   transform: scale(1.02);
   z-index: -3;
 }
